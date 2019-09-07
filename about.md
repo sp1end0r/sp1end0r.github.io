@@ -4,12 +4,16 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
-
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
+### name : Lee. Jae hyu(a.k.a sp1end0r)
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+mailto : ssinus.zk@gmail.com  
+facebook : https://www.facebook.com/jeahyu.lee    
+github : https://github.com/sp1end0r    
+
+### Education
+2014.03 ~ 충북대 컴퓨터공학과 재학  
+
+### Interesting
+system hack, bug hunting, reverse enginnering  

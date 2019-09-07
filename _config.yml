@@ -3,11 +3,10 @@
 #
 
 # Name of your site (displayed in the header)
-name: sp1end0r
+name: sp1end0r's bl0g
 
 # Short bio or description (displayed in the header)
-description: hello
-
+description: Lee. Jaehyu(a.k.a sp1end0r)
 #
 # Flags below are optional
 #
@@ -20,10 +19,10 @@ avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/je
 # and URL Link(e.g. 'Theme' tab below) tabs. If you don't need one, just delete
 # it from the list(Delete '- name: ' and 'url: ', too!)
 navigation:
-  - name: Blog
-    url: /
   - name: About
     url: /about
+  - name: Post
+    url: /
   - name: Archive
     url: /archive
   - name: Tags
