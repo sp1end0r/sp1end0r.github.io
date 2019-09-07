@@ -8,7 +8,7 @@ permalink: /about/
 
 ### Contact me
 
-[email@domain.com](mailto:ssinus.zk@gmail.com)  
+mailto : ssinus.zk@gmail.com
 facebook : https://www.facebook.com/jeahyu.lee  
 github : https://github.com/sp1end0r  
 
