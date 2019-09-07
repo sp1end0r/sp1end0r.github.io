@@ -4,18 +4,16 @@ title: About
 permalink: /about/
 ---
 
-My name is 
-
 ### name : Lee. Jae hyu(a.k.a sp1end0r)
 
 ### Contact me
 
-[email@domain.com](mailto:ssinus.zk@gmail.com)
-facebook : https://www.facebook.com/jeahyu.lee
-github : https://github.com/sp1end0r
+[email@domain.com](mailto:ssinus.zk@gmail.com)  
+facebook : https://www.facebook.com/jeahyu.lee  
+github : https://github.com/sp1end0r  
 
 ### Education
-2014.03 ~ 충북대 컴퓨터공학과 재학
+2014.03 ~ 충북대 컴퓨터공학과 재학  
 
 ### Interesting
-system hack, bug hunting, reverse enginnering
+system hack, bug hunting, reverse enginnering  
