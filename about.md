@@ -8,9 +8,9 @@ permalink: /about/
 
 ### Contact me
 
-mailto : ssinus.zk@gmail.com
-facebook : https://www.facebook.com/jeahyu.lee  
-github : https://github.com/sp1end0r  
+mailto : ssinus.zk@gmail.com  
+facebook : https://www.facebook.com/jeahyu.lee    
+github : https://github.com/sp1end0r    
 
 ### Education
 2014.03 ~ 충북대 컴퓨터공학과 재학  
