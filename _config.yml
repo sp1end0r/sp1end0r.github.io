@@ -19,10 +19,10 @@ avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/je
 # and URL Link(e.g. 'Theme' tab below) tabs. If you don't need one, just delete
 # it from the list(Delete '- name: ' and 'url: ', too!)
 navigation:
-  - name: Blog
-    url: /
   - name: About
     url: /about
+  - name: Post
+    url: /
   - name: Archive
     url: /archive
   - name: Tags
