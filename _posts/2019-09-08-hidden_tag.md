@@ -12,9 +12,10 @@ comments: true
 
 ## CSRF
 Cross Site Request Forgery의 약어로 사이트 간 요청 위조를 의미한다. 단어가 XSS(Cross Site Sript)와 비슷해보이지만 둘은 다른 웹 취약점이다.  
-CSRF는 사용자가 자신의 의지와는 무관하게 서버에 공격자가 의도한 행위(변경, 삭제 등)을 요청하는 공격이다.    
+CSRF는 사용자가 자신의 의지와는 무관하게 서버에 공격자가 의도한 행위(변경, 삭제 등)을 요청하는 공격이다.      
 
-[!csrf_attack][../images/post/2019-09-08-csrf.png]
+[!csrf_attack][./images/post/2019-09-08-csrf.png] . 
+
 CSRF의 공격과정은 다음과 닽이 진행된다.  
 1. 공격자는 공격할 웹 서버(Target)에 악성 스크립트가 포함된 글을 게시한다.
 2. 사용자는 해당 스크립트가 포함된 글을 읽기 위해, 서버로 게시글 열람 요청을 보낸다.  
