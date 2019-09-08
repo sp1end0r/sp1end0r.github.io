@@ -103,7 +103,13 @@ comments: true
   width: 100%;
 }
 ```
-
+```css
+#inlcude <stdio.h>
+int main()
+{
+    printf("hello world\n");
+}
+```
 ### 일반적인 코드
 
     <div id="awesome">
