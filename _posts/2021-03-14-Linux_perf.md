@@ -43,8 +43,8 @@ WARNING: perf not found for kernel 4.15.0-135
 # Do it !
 
 - perf에서 성능을 측정하는 command는 stat와 record로 구분
-- stat :  주요 이벤트를 측정하여 해당 이벤트의 수행횟수 및 프로세스 실행시간을 화면에 출력해줌
--e 옵션을 통해 측정하고자 하는 이벤트만 측정 가능
+- stat :  주요 이벤트를 측정하여 해당 이벤트의 수행횟수 및 프로세스 실행시간을 화면에 출력
+  - -e 옵션을 통해 측정하고자 하는 이벤트만 측정 가능
 
 ```bash
 $ perf stat -p [pid] //현재 실행중인 프로세스의 성능 측정
@@ -74,8 +74,8 @@ Performance counter stats for 'ls':
 - record : 측정된 결과를 별도의 파일로 출력(default output : perf.data, 이것도 이름 지정가능)
 - e 옵션을 통해 측정하고자 하는 이벤트를 선택할 수 있으며, 기본은 cpu-clock
 - record로 측정된 결과를 보기 위해서는 script나 report command를 사용해야 함
-   - script : 측정된 결과를 모두 보여줌
-   - report : 측정된 결과를 잘 정리하여 보여줌
+  - script : 측정된 결과를 모두 보여줌
+  - report : 측정된 결과를 잘 정리하여 보여줌
 
 ```bash
 $ perf record -p [pid] // 현재 실행중인 프로세스의 성능 측정
@@ -142,27 +142,32 @@ $ perf report -T -tid 3604 -n
      1.19%          4525  h264dec  h264dec      [.] get_cabac_noinline
 ```
 
-      3. -v
-       이건 성능저하 지점을 좀더 자세하게 표현하여 함수단위로 보여줌
-      - perf stat
-      1. -t —tid=[tid] 
+3. -v
+   이건 성능저하 지점을 좀더 자세하게 표현하여 함수단위로 보여줌
+
+
+- perf stat
+   1. -t —tid=[tid] 
       각 쓰레드 별로 stat 결과를 보고싶을 때 사용
       ~~(단, tid를 알아야되서 측정할 때 좀 귀찮음)~~
 
+      
 - 주로 측정에 사용 되는 이벤트
-- cpu-clock[Software event] : default event이며, 측정하는 프로세스에서 특정 함수가 cpu의 점유시간 
+   - cpu-clock[Software event] : default event이며, 측정하는 프로세스에서 특정 함수가 cpu의 점유시간 
    ~~(task-clock하고 차이를 모르겟음)~~
-- cache-misses [Hardware event] : 캐시 미스가 발생한 횟수를 측정
-- dTLB-load-misses, iTLB-load-misses [Hardware Event]: 같이 쓰며 TLB miss가 발생한 횟수 측정
-- page-faults or faults[software event] : 프로세스에서 page-fault가 발생한 횟수 측정
-- 성능 측정 후 별도의 output file을 생성하고 싶을때 ?
--o or —output [file_name]으로 사용 가능
-(stat와 record 모두 가능)
+   - cache-misses [Hardware event] : 캐시 미스가 발생한 횟수를 측정
+   - dTLB-load-misses, iTLB-load-misses [Hardware Event]: 같이 쓰며 TLB miss가 발생한 횟수 측정
+   - page-faults or faults[software event] : 프로세스에서 page-fault가 발생한 횟수 측정
+
+
+- 성능 측정 후 별도의 output file을 생성하고 싶을때 ? 
+   -o or —output [file_name]으로 사용 가능(stat와 record 모두 가능)
 - report 시 overhead가 적은 애들은 제외하고 싶을때는 ?
 
-```python
+```bash
 $ perf report --percent-limit=[Wanted]
 ```
-  
-  
+
+
+
 last update : 2021.03.14
