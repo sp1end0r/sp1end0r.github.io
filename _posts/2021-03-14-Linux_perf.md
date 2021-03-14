@@ -9,11 +9,11 @@ comments: true
 # Install
 
 - build 
-  kernel source의 root directory에서 tool/perf로 이동하여 make
-~~(단, kernel source는 현재 시스템의 커널버전과 동일해야함)~~
-  디렉토리 이동 없이 쓰고 싶으면 환경변수에 추가해주면 됨
-- apt-get
-  apt로 설치 가능
+  kernel source의 root directory에서 tool/perf로 이동하여 make  
+  ~~(단, kernel source는 현재 시스템의 커널버전과 동일해야함)~~  
+  디렉토리 이동 없이 쓰고 싶으면 환경변수에 추가해주면 됨  
+- apt-get  
+  apt로 설치 가능  
 ~~(추후 찾아봐야할듯, perf가 설치되지않은 시스템에 perf치면 apt command 알려줌)~~
 
 ```bash
@@ -31,14 +31,14 @@ WARNING: perf not found for kernel 4.15.0-135
 
 # Event
 
-- perf가 측정하는 이벤트들로 하드웨어, 소프트웨어 구분 
+- perf가 측정하는 이벤트들로 하드웨어, 소프트웨어 구분  
 ~~(하드웨어 이벤트들의 경우, VM처럼 시스템에서 지원이 안되면 측정이 안됨 → 해결방안은 아직 모르겟음)~~
 - 추가적으로 특정 함수나, 객체에 대한 tracing point도 설정하여 측정 가능~~(이건 안써봄)~~
-- user-level 에서 성능 저하를 측정할 때는 cpu-clock을 사용
+- user-level 에서 성능 저하를 측정할 때는 cpu-clock을 사용  
 ~~(task-clock도 있던데 구글링 해보니 차이점 없다함)~~
-- perf -e [event name]으로 특정 이벤트에 대한 성능 측정 가능
-- 지원하는 이벤트 목록을 보고싶으면 perf list로 확인 가능 
-~~(event list에 대해서 찾아봐야 할듯)~~
+- perf -e [event name]으로 특정 이벤트에 대한 성능 측정 가능  
+- 지원하는 이벤트 목록을 보고싶으면 perf list로 확인 가능  
+~~(event list에 대해서 찾아봐야 할듯)~~  
 
 # Do it !
 
@@ -72,10 +72,10 @@ Performance counter stats for 'ls':
 ```
 
 - record : 측정된 결과를 별도의 파일로 출력(default output : perf.data, 이것도 이름 지정가능)
-- e 옵션을 통해 측정하고자 하는 이벤트를 선택할 수 있으며, 기본은 cpu-clock
-- record로 측정된 결과를 보기 위해서는 script나 report command를 사용해야 함
-  - script : 측정된 결과를 모두 보여줌
-  - report : 측정된 결과를 잘 정리하여 보여줌
+  - e 옵션을 통해 측정하고자 하는 이벤트를 선택할 수 있으며, 기본은 cpu-clock  
+  - record로 측정된 결과를 보기 위해서는 script나 report command를 사용해야 함  
+    - script : 측정된 결과를 모두 보여줌  
+    - report : 측정된 결과를 잘 정리하여 보여줌  
 
 ```bash
 $ perf record -p [pid] // 현재 실행중인 프로세스의 성능 측정
@@ -151,7 +151,7 @@ $ perf report -T -tid 3604 -n
       각 쓰레드 별로 stat 결과를 보고싶을 때 사용
       ~~(단, tid를 알아야되서 측정할 때 좀 귀찮음)~~
 
-      
+
 - 주로 측정에 사용 되는 이벤트
    - cpu-clock[Software event] : default event이며, 측정하는 프로세스에서 특정 함수가 cpu의 점유시간 
    ~~(task-clock하고 차이를 모르겟음)~~
