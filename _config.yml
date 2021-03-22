@@ -20,9 +20,9 @@ avatar: /images/profile.jpg
 # it from the list(Delete '- name: ' and 'url: ', too!)
 navigation:
   - name: About me
-    url: /about
-  - name: Post
     url: /
+  - name: Post
+    url: /post
   - name: Archive
     url: /archive
   - name: Category
